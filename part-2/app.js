@@ -28,6 +28,7 @@ function cameraStart() {
 cameraSwitch.onclick = function() {
   user == 'user' ? user = 'environment' : user = 'user';
   console.dir(user);
+  track.stop();
   cameraStart();
 };
 

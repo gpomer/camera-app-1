@@ -28,8 +28,8 @@ html, body{
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     position: fixed;
-    bottom: 30px;
-    left: calc(50% - 200px);
+    top: calc(100% - 120px);
+    right: 0;
 }
 
 #camera--switch{
@@ -43,8 +43,8 @@ html, body{
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     position: fixed;
-    bottom: 30px;
-    left: calc(50% - 000px);
+    top: calc(100% - 60px);
+    right: 0;
 }
 
 .taken{
