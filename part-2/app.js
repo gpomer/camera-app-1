@@ -47,3 +47,17 @@ if ('serviceWorker' in navigator) {
   console.log('CLIENT: service worker is not supported.');
 }
 
+//var canvas = document.getElementById('viewport'),
+context = cameraSensor.getContext('2d');
+
+make_base();
+
+function make_base()
+{
+  base_image = new Image();
+  base_image.src = 'pigeon.png';
+  base_image.onload = function(){
+    context.drawImage(base_image, 0, 0);
+  }
+}
+
