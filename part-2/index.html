@@ -27,20 +27,34 @@
 		<link rel="stylesheet" href="style.css"> 
 	</head>
 	<body>
+    <div style="
+    position: fixed;
+    bottom: -150;
+    left: -150;
+    z-index: 1;
+    width: 700px;
+    height: 700px;
+    background: url(knuffle.png);
+    background-size: 700px 700px;
+    ">
 
+    </div>
 		<!-- Camera -->
 		<main id="camera">
 		    <!-- Camera sensor -->
-		    <canvas id="camera--sensor"></canvas>
+		    <canvas id="camera--sensor">
+        </canvas>
 		    
 		    <!-- Camera view -->
-		    <video id="camera--view" autoplay playsinline></video>
+		    <video id="camera--view" autoplay playsinline>
+        </video>
 		    
 		    <!-- Camera output -->
 		    <img src="//:0" alt="" id="camera--output">
 
 		    <!-- Camera trigger -->
 		    <button id="camera--trigger">Take a picture</button>
+        <button id="camera--switch">Camera</button>
 
 		</main>
 
