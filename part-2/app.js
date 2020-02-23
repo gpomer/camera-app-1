@@ -20,6 +20,7 @@ function cameraStart() {
             base_image.src = 'pigeon.png';
             base_image.onload = function(){
               context.drawImage(base_image, 0, 0);
+            }
         })
         .catch(function(error) {
             console.error("Oops. Something is broken.", error);
