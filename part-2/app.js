@@ -7,6 +7,7 @@ const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
     cameraTrigger = document.querySelector("#camera--trigger");
+context = cameraSensor.getContext('2d');
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
@@ -15,6 +16,7 @@ function cameraStart() {
         .then(function(stream) {
             track = stream.getTracks()[0];
             cameraView.srcObject = stream;
+            make_base();
         })
         .catch(function(error) {
             console.error("Oops. Something is broken.", error);
@@ -48,9 +50,6 @@ if ('serviceWorker' in navigator) {
 }
 
 //var canvas = document.getElementById('viewport'),
-context = cameraSensor.getContext('2d');
-
-make_base();
 
 function make_base()
 {
