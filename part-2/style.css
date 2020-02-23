@@ -5,16 +5,20 @@ html, body{
   width: 100%;
 }
 
-#camera, #camera--view, #camera--sensor, #camera--output{
+#camera, #camera--view, #camera--sensor, #camera--output, #camera--background{
     position: fixed;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-#camera--view, #camera--sensor, #camera--output{
+#camera--view, #camera--sensor, #camera--output, #camera--background{
     transform: scaleX(-1);
     filter: FlipH;
+}
+
+#camera--background {
+  background:url('pigeon.png');
 }
 
 #camera--trigger{
