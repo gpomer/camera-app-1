@@ -7,7 +7,6 @@ const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
     cameraTrigger = document.querySelector("#camera--trigger");
-context = cameraSensor.getContext('2d');
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
@@ -16,7 +15,11 @@ function cameraStart() {
         .then(function(stream) {
             track = stream.getTracks()[0];
             cameraView.srcObject = stream;
-            make_base();
+            context = cameraView.getContext('2d');
+            base_image = new Image();
+            base_image.src = 'pigeon.png';
+            base_image.onload = function(){
+              context.drawImage(base_image, 0, 0);
         })
         .catch(function(error) {
             console.error("Oops. Something is broken.", error);
@@ -48,15 +51,3 @@ if ('serviceWorker' in navigator) {
 } else {
   console.log('CLIENT: service worker is not supported.');
 }
-
-//var canvas = document.getElementById('viewport'),
-
-function make_base()
-{
-  base_image = new Image();
-  base_image.src = 'pigeon.png';
-  base_image.onload = function(){
-    context.drawImage(base_image, 0, 0);
-  }
-}
-
