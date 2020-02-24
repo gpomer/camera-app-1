@@ -27,18 +27,11 @@
 		<link rel="stylesheet" href="style.css"> 
 	</head>
 	<body>
-    <div style="
-    position: fixed;
-    bottom: -150;
-    left: -250;
-    z-index: 1;
-    width: 700px;
-    height: 700px;
-    background: url(knuffle.png);
-    background-size: 700px 700px;
-    ">
-
-    </div>
+    <div id="mrbump--overlay" class="overlay" style=""></div>
+    <div id="knuffle--overlay" class="overlay" style=""></div>
+    <div id="underpants--overlay" class="overlay" style=""></div>
+    <div id="pigeon--overlay" class="overlay" style=""></div>
+    <div id="caterpillar--overlay" class="overlay" style=""></div>
 		<!-- Camera -->
 		<main id="camera">
 		    <!-- Camera sensor -->
@@ -53,8 +46,13 @@
 		    <img src="//:0" alt="" id="camera--output">
 
 		    <!-- Camera trigger -->
-		    <button id="camera--trigger">Take a picture</button>
-        <button id="camera--switch">Camera</button>
+		    <div id="caterpillar--switch" class="icon-switch"><img style="width:60px;height:70px;" src='caterpillar.png'></div>
+		    <div id="pigeon--switch" class="icon-switch"><img style="width:60px;height:70px;" src='pigeon.png'></div>
+		    <div id="underpants--switch" class="icon-switch"><img style="width:60px;height:70px;" src='underpants.png'></div>
+		    <div id="knuffle--switch" class="icon-switch"><img style="width:60px;height:70px;" src='knuffle.png'></div>
+		    <div id="mrbump--switch" class="icon-switch"><img style="width:60px;height:70px;" src='mrbump.png'></div>
+        <img id="camera--switch" style="width:60px;height:70px;" src="reverse-camera.png">
+        <img id="camera--trigger" style="width:60px;height:70px;" src="camera-takepic.jpg">
 
 		</main>
 

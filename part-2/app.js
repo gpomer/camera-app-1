@@ -2,13 +2,19 @@
 var user = 'user';
 var constraints;
 var track = null;
+var baseImage = 'mrbump.png';
 
 // Define constants
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
     cameraTrigger = document.querySelector("#camera--trigger"),
-    cameraSwitch = document.querySelector("#camera--switch");
+    cameraSwitch = document.querySelector("#camera--switch"),
+    knuffleSwitch = document.querySelector("#knuffle--switch"),
+    mrbumpSwitch = document.querySelector("#mrbump--switch"),
+    underpantsSwitch = document.querySelector("#underpants--switch"),
+    pigeonSwitch = document.querySelector("#pigeon--switch"),
+    caterpillarSwitch = document.querySelector("#caterpillar--switch");
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
@@ -31,13 +37,63 @@ cameraSwitch.onclick = function() {
   track.stop();
   cameraStart();
 };
+pigeonSwitch.onclick = function() {
+  baseImage = 'pigeon.png';
+  hideAll();
+  document.querySelector("#pigeon--overlay").style.visibility = 'visible';
+  document.querySelector("#pigeon--switch").style.background = 'yellow';
+  console.dir('switched image');
+};
+
+knuffleSwitch.onclick = function() {
+  baseImage = 'knuffle.png';
+  hideAll();
+  document.querySelector("#knuffle--overlay").style.visibility = 'visible';
+  document.querySelector("#knuffle--switch").style.background = 'yellow';
+  console.dir('switched image');
+};
+
+mrbumpSwitch.onclick = function() {
+  baseImage = 'mrbump.png';
+  hideAll();
+  document.querySelector("#mrbump--overlay").style.visibility = 'visible';
+  document.querySelector("#mrbump--switch").style.background = 'yellow';
+  console.dir('switched image');
+};
+
+underpantsSwitch.onclick = function() {
+  baseImage = 'underpants.png';
+  hideAll();
+  document.querySelector("#underpants--overlay").style.visibility = 'visible';
+  document.querySelector("#underpants--switch").style.background = 'yellow';
+  console.dir('switched image');
+};
+
+caterpillarSwitch.onclick = function() {
+  baseImage = 'caterpillar.png';
+  hideAll();
+  document.querySelector("#caterpillar--overlay").style.visibility = 'visible';
+  document.querySelector("#caterpillar--switch").style.background = 'yellow';
+  console.dir('switched image');
+};
+
+function hideAll() {
+  highlightedItems = document.querySelectorAll(".overlay");
+  highlightedItems.forEach(function(overlayItem) {
+    overlayItem.style.visibility = 'hidden';
+  });
+  iconItems = document.querySelectorAll(".icon-switch");
+  iconItems.forEach(function(iconItem) {
+    iconItem.style.background = 'black';
+  });
+}
 
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
     cameraSensor.width = cameraView.videoWidth;
     cameraSensor.height = cameraView.videoHeight;
             base_image = new Image();
-            base_image.src = 'knuffle.png';
+            base_image.src = baseImage;
             base_image.onload = function(){
               cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
               cameraSensor.getContext("2d").drawImage(base_image, -150, 150);
