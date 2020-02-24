@@ -27,6 +27,8 @@
 		<link rel="stylesheet" href="style.css"> 
 	</head>
 	<body>
+  <div id="xPos"></div>
+  <div id="yPos"></div>
     <div id="mrbump--overlay" class="overlay" style=""></div>
     <div id="knuffle--overlay" class="overlay" style=""></div>
     <div id="underpants--overlay" class="overlay" style=""></div>
@@ -44,8 +46,17 @@
         </video>
 		    
 		    <!-- Camera output -->
-		    <img src="//:0" alt="" id="camera--output">
-
+        <div id="imageTaken">
+		      <img src="//:0" alt="" id="camera--output">
+        </div>
+        <!--
+        <div id="imageTakenBox" >
+        		    <video id="imageTakenBox--view" autoplay playsinline>
+                </video>
+        		    <canvas id="imageTakenBox--canvas">
+                </canvas>
+        </div>
+        -->
 		    <!-- Camera trigger -->
 		    <div id="brownbear--switch" class="icon-switch"><img style="width:60px;height:70px;" src='brownbear.png'></div>
 		    <div id="caterpillar--switch" class="icon-switch"><img style="width:60px;height:70px;" src='caterpillar.png'></div>

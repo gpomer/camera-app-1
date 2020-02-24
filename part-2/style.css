@@ -45,7 +45,7 @@ html, body{
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     top: 20px;
     right: 20px;
-    z-index: 2;
+    z-index: 5;
 }
 
 #brownbear--switch{
@@ -53,12 +53,78 @@ html, body{
     height: 70px;
     border-radius: 30px;
     border: none;
-    padding: 10px 10px;
+    padding: 5px 5px;
     position: fixed;
-    top: calc(100% - 720px);
-    right: 120px;
+    top: calc(100% - 640px);
+    right: 30px;
     z-index: 99;
     background-color: black;
+}
+
+#caterpillar--switch{
+    width: 60px;
+    height: 70px;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 5px;
+    position: fixed;
+    top: calc(100% - 550px);
+    right: 30px;
+    z-index: 99;
+    background-color: black;
+}
+
+#pigeon--switch{
+    width: 60px;
+    height: 70px;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 5px;
+    position: fixed;
+    top: calc(100% - 460px);
+    right: 30px;
+    z-index: 99;
+    background-color: black;
+}
+
+#underpants--switch{
+    width: 60px;
+    height: 70px;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 5px;
+    position: fixed;
+    top: calc(100% - 370px);
+    right: 30px;
+    z-index: 99;
+    background-color: black;
+}
+
+#knuffle--switch{
+    width: 60px;
+    height: 70px;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 5px;
+    position: fixed;
+    top: calc(100% - 280px);
+    right: 30px;
+    z-index: 99;
+    background-color: black;
+}
+
+
+#mrbump--switch{
+    width: 60px;
+    height: 70px;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 5px;
+    position: fixed;
+    top: calc(100% - 190px);
+    right: 30px;
+    z-index: 99;
+    background-color: yellow;
 }
 
 #brownbear--overlay {
@@ -73,19 +139,6 @@ html, body{
     visibility:hidden;
 }
 
-#caterpillar--switch{
-    width: 60px;
-    height: 70px;
-    border-radius: 30px;
-    border: none;
-    padding: 10px 10px;
-    position: fixed;
-    top: calc(100% - 720px);
-    right: 30px;
-    z-index: 99;
-    background-color: black;
-}
-
 #caterpillar--overlay {
     position: fixed;
     bottom: -150;
@@ -96,19 +149,6 @@ html, body{
     background: url(caterpillar.png);
     background-size: 500px 500px;
     visibility:hidden;
-}
-
-#pigeon--switch{
-    width: 60px;
-    height: 70px;
-    border-radius: 30px;
-    border: none;
-    padding: 10px 10px;
-    position: fixed;
-    top: calc(100% - 590px);
-    right: 30px;
-    z-index: 99;
-    background-color: black;
 }
 
 #pigeon--overlay {
@@ -123,19 +163,6 @@ html, body{
     visibility:hidden;
 }
 
-#underpants--switch{
-    width: 60px;
-    height: 70px;
-    border-radius: 30px;
-    border: none;
-    padding: 10px 10px;
-    position: fixed;
-    top: calc(100% - 470px);
-    right: 30px;
-    z-index: 99;
-    background-color: black;
-}
-
 #underpants--overlay {
     position: fixed;
     bottom: -150;
@@ -146,19 +173,6 @@ html, body{
     background: url(underpants.png);
     background-size: 500px 500px;
     visibility:hidden;
-}
-
-#knuffle--switch{
-    width: 60px;
-    height: 70px;
-    border-radius: 30px;
-    border: none;
-    padding: 10px 10px;
-    position: fixed;
-    top: calc(100% - 350px);
-    right: 30px;
-    z-index: 99;
-    background-color: black;
 }
 
 #knuffle--overlay {
@@ -173,19 +187,6 @@ html, body{
     visibility:hidden;
 }
 
-#mrbump--switch{
-    width: 60px;
-    height: 70px;
-    border-radius: 30px;
-    border: none;
-    padding: 10px 10px;
-    position: fixed;
-    top: calc(100% - 230px);
-    right: 30px;
-    z-index: 99;
-    background-color: yellow;
-}
-
 #mrbump--overlay {
     position: fixed;
     bottom: -150;
@@ -195,4 +196,24 @@ html, body{
     height: 500px;
     background: url(mrbump.png);
     background-size: 500px 500px;
+}
+
+#imageTakenBox--view {
+position:fixed;
+    height: 100px!important;
+    width: 170px!important;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    object-fit: cover;
+}
+#imageTakenBox--canvas {
+position:fixed;
+    height: 100px!important;
+    width: 170px!important;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
 }
