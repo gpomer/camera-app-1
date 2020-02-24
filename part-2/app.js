@@ -59,8 +59,8 @@ cameraTrigger.onclick = function() {
     //getResolution();
            // alert("W/H: "+cameraView.videoWidth + " x " + cameraView.videoHeight);
 
-    document.querySelector("#imageTaken img").style.width = window.screen.width * .1;
-    document.querySelector("#imageTaken img").style.height = window.screen.height * .1;
+    document.querySelector("#imageTaken img").style.width = window.screen.width * .2;
+    document.querySelector("#imageTaken img").style.height = window.screen.height * .2;
             base_image = new Image();
             base_image.src = baseImage;
             base_image.onload = function(){
