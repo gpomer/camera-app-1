@@ -48,6 +48,31 @@ html, body{
     z-index: 2;
 }
 
+#brownbear--switch{
+    width: 60px;
+    height: 70px;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 10px;
+    position: fixed;
+    top: calc(100% - 720px);
+    right: 120px;
+    z-index: 99;
+    background-color: black;
+}
+
+#brownbear--overlay {
+    position: fixed;
+    bottom: -150;
+    left: -150;
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+    background: url(brownbear.png);
+    background-size: 500px 500px;
+    visibility:hidden;
+}
+
 #caterpillar--switch{
     width: 60px;
     height: 70px;

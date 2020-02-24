@@ -14,7 +14,8 @@ const cameraView = document.querySelector("#camera--view"),
     mrbumpSwitch = document.querySelector("#mrbump--switch"),
     underpantsSwitch = document.querySelector("#underpants--switch"),
     pigeonSwitch = document.querySelector("#pigeon--switch"),
-    caterpillarSwitch = document.querySelector("#caterpillar--switch");
+    caterpillarSwitch = document.querySelector("#caterpillar--switch"),
+    brownbearSwitch = document.querySelector("#brownbear--switch");
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
@@ -74,6 +75,14 @@ caterpillarSwitch.onclick = function() {
   hideAll();
   document.querySelector("#caterpillar--overlay").style.visibility = 'visible';
   document.querySelector("#caterpillar--switch").style.background = 'yellow';
+  console.dir('switched image');
+};
+
+brownbearSwitch.onclick = function() {
+  baseImage = 'brownbear.png';
+  hideAll();
+  document.querySelector("#brownbear--overlay").style.visibility = 'visible';
+  document.querySelector("#brownbear--switch").style.background = 'yellow';
   console.dir('switched image');
 };
 
